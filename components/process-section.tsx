@@ -6,22 +6,22 @@ const steps = [
   {
     number: "01",
     title: "Discover & Diagnose",
-    description: "We map your current workflows, identify bottlenecks, and prioritize opportunities based on impact and effort.",
+    description: "Before anything gets built, I learn how you actually work. Not how it's supposed to work on paper.",
   },
   {
     number: "02",
     title: "Map & Architect",
-    description: "I design the automation architecture—selecting the right tools, defining data flows, and planning integrations.",
+    description: "I lay out what gets built, in what order, with which tools. You see the full plan before a single workflow is touched.",
   },
   {
     number: "03",
     title: "Build & Test",
-    description: "Rapid iteration with you in the loop. I build, you test. We refine until it works flawlessly.",
+    description: "I build, you test against your real data and real edge cases. Most issues surface here. That's the point.",
   },
   {
     number: "04",
     title: "Hand Over & Scale",
-    description: "Full documentation, team training, and ongoing support. You own it completely—no lock-in.",
+    description: "Full documentation, a walkthrough with your team, and everything in your hands. No dependency on me to keep it running.",
   },
 ]
 
@@ -36,7 +36,7 @@ export function ProcessSection() {
               How we <em>work</em> together.
             </h2>
             <p className="font-sans font-light text-charcoal/70 text-lg lg:pt-4">
-              A proven process refined over hundreds of engagements. Transparent, collaborative, and designed to deliver results fast.
+              I&apos;ve run this process across enough engagements to know what breaks at each stage. The order matters. Skipping steps is where projects go wrong.
             </p>
           </div>
         </ScrollReveal>
