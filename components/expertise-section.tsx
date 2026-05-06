@@ -5,44 +5,38 @@ import { ScrollReveal } from "./scroll-reveal"
 const expertiseCards = [
   {
     number: "01",
-    emoji: "⚙️",
     title: "Automation Architecture",
-    description: "End-to-end workflow design using n8n, Make, and custom APIs. From diagnosis to deployment.",
+    description: "I map broken workflows, pick the right tools, and build the fix. You get a working system, not a proposal.",
     link: "Learn more",
   },
   {
     number: "02",
-    emoji: "🤖",
     title: "AI Product Strategy",
-    description: "Integrating LLMs and AI agents into your product stack. Practical, not hype-driven.",
+    description: "I wire LLMs into existing stacks only when they replace actual work. No proofs of concept that go nowhere.",
     link: "Learn more",
   },
   {
     number: "03",
-    emoji: "📣",
-    title: "LinkedIn Brand Systems",
-    description: "Automated content pipelines that keep your founder brand active without the daily grind.",
+    title: "Marketing Automation",
+    description: "Most marketing fails because it depends on someone remembering to do it. I build systems that run automatically.",
     link: "Learn more",
   },
   {
     number: "04",
-    emoji: "🧭",
     title: "Startup Ops Advisory",
-    description: "Fractional operations leadership for early-stage teams. Process design, tool selection, team enablement.",
+    description: "You're moving fast and the ops layer hasn't kept up. I come in part-time, find what's slowing you down, and fix it. Process design, tool selection, the works.",
     link: "Learn more",
   },
   {
     number: "05",
-    emoji: "🎤",
     title: "Keynotes & Workshops",
-    description: "Speaking engagements on automation, AI in operations, and the future of work. Remote or on-site.",
+    description: "I talk about automation and AI in plain terms, for teams that want to understand what's actually changing and what to do about it. Remote or on-site.",
     link: "Book a talk",
   },
   {
     number: "06",
-    emoji: "🔧",
     title: "Custom Builds",
-    description: "Bespoke automation projects for unique challenges. If it can be automated, I can build it.",
+    description: "Not everything fits a standard engagement. Tell me what you're dealing with and I'll tell you honestly if it's worth building.",
     link: "Start a project",
   },
 ]
@@ -70,7 +64,6 @@ export function ExpertiseSection() {
                 <div className="absolute top-0 left-0 w-full h-[3px] bg-coral scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
                 
                 <p className="font-serif italic text-coral text-lg mb-4">{card.number}.</p>
-                <span className="text-2xl mb-4 block">{card.emoji}</span>
                 <h3 className="font-serif text-2xl font-bold mb-4">{card.title}</h3>
                 <p className="font-sans font-light text-cream/70 mb-6">{card.description}</p>
                 <a href="#contact" className="text-coral font-mono text-[0.75rem] uppercase tracking-[0.1em] hover:underline">
