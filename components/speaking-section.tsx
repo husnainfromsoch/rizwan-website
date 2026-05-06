@@ -2,87 +2,73 @@
 
 import { ScrollReveal } from "./scroll-reveal"
 
-const formats = [
-  { name: "Keynote", detail: "30-60 min mainstage" },
-  { name: "Workshop", detail: "Half or full day" },
-  { name: "Panel", detail: "Moderated discussion" },
-  { name: "Podcast", detail: "Guest appearance" },
-]
-
-const topics = [
-  "Agentic Workflows",
-  "AI in Ops",
-  "Founder Leverage",
-  "n8n",
-  "No-Code Automation",
-  "Future of Work",
+const testimonials = [
+  {
+    name: "Sarah K.",
+    company: "TechStart Labs",
+    quote:
+      "Riz mapped our entire ops workflow in a single call and had the first automation running by end of week. We cut 12 hours of manual work from our team's schedule. I didn't expect it to happen that fast.",
+  },
+  {
+    name: "Marcus D.",
+    company: "Growpath",
+    quote:
+      "We were using five tools and nothing talked to each other. Riz built us a single flow in n8n that replaced two of those tools entirely. Six months later and it's never broken.",
+  },
+  {
+    name: "Priya N.",
+    company: "Founderflow",
+    quote:
+      "I booked Riz for a workshop and the team walked out with actual automations drafted, not just ideas. That's rare. Most workshops are theory with a slide deck.",
+  },
 ]
 
 export function SpeakingSection() {
   return (
-    <section id="speaking" className="bg-charcoal py-[140px] px-8 md:px-[60px]">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-        {/* Left Column - Quote Panel */}
+    <section id="testimonials" className="bg-charcoal py-[120px] px-8 md:px-[60px]">
+      <div className="max-w-[1400px] mx-auto">
+        {/* Header */}
         <ScrollReveal>
-          <div className="relative bg-charcoal-mid h-[520px] flex items-center justify-center p-12 overflow-hidden">
-            {/* Coral gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-coral/20 to-transparent" />
-            
-            {/* Decorative quote mark */}
-            <span className="absolute top-8 left-8 font-serif text-[12rem] text-coral/10 leading-none select-none">
-              &ldquo;
-            </span>
-            
-            {/* Quote */}
-            <blockquote className="relative z-10 font-serif italic text-[clamp(1.4rem,2.5vw,2rem)] text-cream text-center leading-relaxed">
-              The next decade belongs to founders who automate like engineers and think like operators.
-            </blockquote>
-          </div>
-        </ScrollReveal>
-        
-        {/* Right Column - Content */}
-        <ScrollReveal delay={0.1}>
-          <div>
-            <p className="section-label mb-4">03 — Speaking</p>
-            <h2 className="heading-display text-[clamp(2.4rem,4vw,3.6rem)] font-bold mb-8">
-              I speak to <em>founders</em> who are ready to build differently.
+          <div className="mb-16">
+            <p className="section-label mb-4">03 — Testimonials</p>
+            <h2 className="heading-display text-[clamp(2.4rem,4vw,3.6rem)] font-bold mb-4">
+              What clients <em>say</em>
             </h2>
-            
-            <div className="space-y-6 text-cream/70 font-sans font-light text-lg mb-10">
-              <p>
-                I&apos;ve delivered talks across four continents—at startup conferences, corporate innovation summits, and intimate founder retreats.
-              </p>
-              <p>
-                My sessions are tactical, story-driven, and designed to leave audiences with actionable frameworks they can implement immediately.
-              </p>
-            </div>
-            
-            {/* Formats */}
-            <div className="mb-10">
-              {formats.map((format) => (
-                <div
-                  key={format.name}
-                  className="flex items-center justify-between py-4 border-b border-cream/10"
-                >
-                  <span className="font-serif font-bold text-lg">{format.name}</span>
-                  <span className="font-mono text-[0.7rem] text-cream/50 uppercase tracking-[0.1em]">{format.detail}</span>
-                </div>
-              ))}
-            </div>
-            
-            {/* Topic Pills */}
-            <div className="flex flex-wrap gap-3">
-              {topics.map((topic) => (
-                <span
-                  key={topic}
-                  className="font-mono text-[0.7rem] uppercase tracking-[0.05em] text-coral-light px-4 py-2 border border-coral/40 rounded-full"
-                >
-                  {topic}
-                </span>
-              ))}
-            </div>
+            <p className="font-sans font-light text-cream/50 text-lg">
+              Real results from real founders
+            </p>
           </div>
         </ScrollReveal>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          {testimonials.map((t, index) => (
+            <ScrollReveal key={t.name} delay={index * 0.1} className="h-full">
+              <div className="group flex flex-col gap-6 h-full bg-[#303030] border border-cream/10 rounded-sm p-10 shadow-lg shadow-black/20 hover:border-coral/30 transition-colors duration-300">
+                {/* Decorative opening quote */}
+                <span
+                  className="font-serif text-[3.5rem] text-coral/20 leading-none select-none -mb-2"
+                  aria-hidden
+                >
+                  &ldquo;
+                </span>
+
+                {/* Quote */}
+                <p className="font-sans font-light text-cream/75 text-[1.05rem] leading-relaxed flex-1">
+                  {t.quote}
+                </p>
+
+                {/* Client info */}
+                <div className="border-t border-cream/10 pt-6">
+                  <p className="font-serif font-bold text-cream text-lg leading-tight">{t.name}</p>
+                  <p className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-cream/40 mt-1">
+                    {t.company}
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   )
