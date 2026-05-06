@@ -1,7 +1,7 @@
 import { CustomCursor } from "@/components/custom-cursor"
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
-import { MarqueeStrip } from "@/components/marquee-strip"
+import { CarouselSection } from "@/components/carousel-section"
 import { AboutSection } from "@/components/about-section"
 import { ExpertiseSection } from "@/components/expertise-section"
 import { SpeakingSection } from "@/components/speaking-section"
@@ -17,7 +17,7 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
-        <MarqueeStrip />
+        <CarouselSection />
         <AboutSection />
         <ExpertiseSection />
         <SpeakingSection />
