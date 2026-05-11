@@ -15,7 +15,7 @@ export function Navigation() {
       background: "linear-gradient(to bottom, rgba(42,42,42,0.9) 0%, transparent 100%)"
     }}>
       <div className="flex items-center justify-between max-w-[1600px] mx-auto">
-        <Link href="/" className="font-serif text-2xl font-bold text-cream hover:text-coral transition-colors">
+        <Link href="/" className="font-serif text-4xl font-bold text-cream hover:text-coral transition-colors">
           Riz.
         </Link>
         <div className="hidden md:flex items-center gap-8">

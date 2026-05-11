@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { ScrollReveal } from "./scroll-reveal"
 
 const tools = [
@@ -24,13 +25,25 @@ const tools = [
 ]
 
 function ToolLogo({ slug, name }: { slug: string; name: string }) {
+  const [errored, setErrored] = useState(false)
+
+  if (errored) {
+    return (
+      <div className="h-16 w-16 mx-auto flex items-center justify-center bg-cream/[0.06] border border-cream/[0.08]">
+        <span className="font-mono text-[0.5rem] uppercase tracking-wide text-cream/30 text-center leading-tight px-1">
+          {name.slice(0, 4)}
+        </span>
+      </div>
+    )
+  }
+
   return (
     <img
       src={`/logos/${slug}.svg`}
       alt={name}
-      width={36}
-      height={36}
-      
+      width={64}
+      height={64}
+      onError={() => setErrored(true)}
       className="h-16 w-16 object-contain mx-auto opacity-50 group-hover:opacity-100 transition-opacity duration-200"
     />
   )
